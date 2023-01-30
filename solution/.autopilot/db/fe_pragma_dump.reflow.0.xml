@@ -1,0 +1,20 @@
+<pragmas>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="146" pragmaType="unroll" parentfunction="multiplier" factor="8" skip_exit_check="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="63" pragmaType="pipeline" parentfunction="multiplier" off="0" ii="1" rewind="0" style=""/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="35" pragmaType="unroll" parentfunction="multiplier" factor="8" skip_exit_check="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="14" pragmaType="interface" parentfunction="multiplier" mode="m_axi" port="vec_a" bundle="gmem1" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="15" pragmaType="interface" parentfunction="multiplier" mode="m_axi" port="vec_b" bundle="gmem2" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="16" pragmaType="interface" parentfunction="multiplier" mode="m_axi" port="result" bundle="gmem3" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="18" pragmaType="interface" parentfunction="multiplier" mode="s_axilite" port="vec_a" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="19" pragmaType="interface" parentfunction="multiplier" mode="s_axilite" port="vec_b" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="20" pragmaType="interface" parentfunction="multiplier" mode="s_axilite" port="result" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="21" pragmaType="interface" parentfunction="multiplier" mode="s_axilite" port="vector_len" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="22" pragmaType="interface" parentfunction="multiplier" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="26" pragmaType="array_partition" parentfunction="multiplier" dim="1" factor="0" mode="complete" dynamic="0" variable="localA"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="28" pragmaType="array_partition" parentfunction="multiplier" dim="2" factor="0" mode="complete" dynamic="0" variable="localB"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="42" pragmaType="array_partition" parentfunction="multiplier" dim="0" factor="0" mode="complete" dynamic="0" variable="sysarrayA_ra"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="45" pragmaType="array_partition" parentfunction="multiplier" dim="0" factor="0" mode="complete" dynamic="0" variable="sysarrayB_ra"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="48" pragmaType="array_partition" parentfunction="multiplier" dim="0" factor="0" mode="complete" dynamic="0" variable="sysarrayA_rb"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="51" pragmaType="array_partition" parentfunction="multiplier" dim="0" factor="0" mode="complete" dynamic="0" variable="sysarrayB_rb"/>
+<pragma file="Systolic-Matrix-Multiplier/design.cpp" line="54" pragmaType="array_partition" parentfunction="multiplier" dim="0" factor="0" mode="complete" dynamic="0" variable="sysarrayC"/>
+</pragmas>

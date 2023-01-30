@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/./sim/autowrap/testbench/design.cpp_pre.cpp.tb.cpp

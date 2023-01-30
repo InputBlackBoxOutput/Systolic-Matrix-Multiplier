@@ -1,0 +1,1266 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 66, 
+                   Column: 13 }
+Function:        multiplier
+Args:            
+  - String:          'Loop '''
+  - LoopName:        systolic2_load
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 69, 
+                   Column: 17 }
+Function:        multiplier
+Args:            
+  - String:          'Loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 103, 
+                   Column: 13 }
+Function:        multiplier
+Args:            
+  - String:          'Loop '''
+  - LoopName:        systolic2_compute
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 106, 
+                   Column: 17 }
+Function:        multiplier
+Args:            
+  - String:          'Loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 130, 
+                   Column: 13 }
+Function:        multiplier
+Args:            
+  - String:          'Loop '''
+  - LoopName:        systolic2_shift
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 133, 
+                   Column: 17 }
+Function:        multiplier
+Args:            
+  - String:          'Loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_144_4
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:144:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '8'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '8'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_144_4
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:144:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic2_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:66:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_load
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:69:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic2_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:103:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_compute
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:106:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic2_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:130:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        systolic3_shift
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:133:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_33_2
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:33:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '8'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '8'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                   Column: 0 }
+Function:        multiplier
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_33_2
+  - String:          ''' ('
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:33:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multiplier
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 25, 
+                   Column: 6 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          localA
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 27, 
+                   Column: 6 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          localB
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 41, 
+                   Column: 13 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sysarrayA_ra
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 44, 
+                   Column: 6 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sysarrayB_ra
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 47, 
+                   Column: 6 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sysarrayA_rb
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 50, 
+                   Column: 6 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sysarrayB_rb
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 53, 
+                   Column: 6 }
+Function:        multiplier
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sysarrayC
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.22
+  - String:          ', '
+  - String:          for.inc.load.54
+  - String:          ', '
+  - String:          for.inc.load.56
+  - String:          ', '
+  - String:          for.inc.load.58
+  - String:          ', '
+  - String:          for.inc.load.60
+  - String:          ', '
+  - String:          for.inc.load.62
+  - String:          ', '
+  - String:          for.inc.load.64
+  - String:          ', '
+  - String:          for.inc.load.66
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        vec_a2934seq
+  - String:          ' '
+  - ArrayName:       vec_a
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:31:19'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.69
+  - String:          ', '
+  - String:          for.inc.load.71
+  - String:          ', '
+  - String:          for.inc.load.73
+  - String:          ', '
+  - String:          for.inc.load.75
+  - String:          ', '
+  - String:          for.inc.load.77
+  - String:          ', '
+  - String:          for.inc.load.79
+  - String:          ', '
+  - String:          for.inc.load.81
+  - String:          ', '
+  - String:          arrayidx1021.7.exit.load.1
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        vec_b2935seq
+  - String:          ' '
+  - ArrayName:       vec_b
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:31:19'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 142, 
+                   Column: 27 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc188.store.16
+  - String:          ', '
+  - String:          for.inc188.store.21
+  - String:          ', '
+  - String:          for.inc188.store.26
+  - String:          ', '
+  - String:          for.inc188.store.31
+  - String:          ', '
+  - String:          for.inc188.store.36
+  - String:          ', '
+  - String:          for.inc188.store.41
+  - String:          ', '
+  - String:          for.inc188.store.46
+  - String:          ', '
+  - String:          for.inc188.store.51
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        result2936seq
+  - String:          ' '
+  - ArrayName:       result
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_142_3
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:142:27'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 142, 
+                   Column: 27 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OldLength:       '64'
+  - String:          ' x '
+  - OldWords:        '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '8'
+  - String:          ': '
+  - Length:          '8'
+  - String:          ' x '
+  - Words:           '256'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          result2936seq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - String:          ' '
+  - ArrayName:       result
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_142_3
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:142:27'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '64'
+  - String:          ' x '
+  - OldWords:        '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '8'
+  - String:          ': '
+  - Length:          '8'
+  - String:          ' x '
+  - Words:           '256'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          vec_a2934seq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq2937
+  - String:          ' '
+  - ArrayName:       vec_a
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:31:19'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '64'
+  - String:          ' x '
+  - OldWords:        '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '8'
+  - String:          ': '
+  - Length:          '8'
+  - String:          ' x '
+  - Words:           '256'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          vec_b2935seq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq2938
+  - String:          ' '
+  - ArrayName:       vec_b
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:31:19'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 142, 
+                   Column: 27 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OldLength:       '8'
+  - String:          ' x '
+  - OldWords:        '256'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '4'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          wseq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq2939
+  - String:          ' '
+  - ArrayName:       result
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_142_3
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:142:27'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '8'
+  - String:          ' x '
+  - OldWords:        '256'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '4'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          wseq2937
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - String:          ' '
+  - ArrayName:       vec_a
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:31:19'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '8'
+  - String:          ' x '
+  - OldWords:        '256'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '4'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          wseq2938
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq2941
+  - String:          ' '
+  - ArrayName:       vec_b
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          ' '
+  - LoopLoc:         'Systolic-Matrix-Multiplier/design.cpp:31:19'
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 31, 
+                   Column: 19 }
+Function:        multiplier
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 142, 
+                   Column: 27 }
+Function:        multiplier
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - Function:        multiplier
+    DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: Systolic-Matrix-Multiplier/design.cpp, Line: 142, 
+                   Column: 27 }
+Function:        multiplier
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

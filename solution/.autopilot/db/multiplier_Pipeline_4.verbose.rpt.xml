@@ -1,0 +1,243 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'multiplier_Pipeline_4'" level="0">
+<item name = "Date">Sun Jan 29 23:46:51 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">Systolic-Matrix-Multiplier</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 1.244 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">64, 64, 1, 1, 1, 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 25, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 27, -</column>
+<column name="Register">-, -, 9, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="empty_106_fu_892_p2">+, 0, 0, 14, 7, 1</column>
+<column name="exitcond110772_fu_886_p2">icmp, 0, 0, 11, 7, 8</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_p_load">9, 2, 7, 14</column>
+<column name="empty_fu_170">9, 2, 7, 14</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="empty_fu_170">7, 0, 7, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, multiplier_Pipeline_4, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, multiplier_Pipeline_4, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, multiplier_Pipeline_4, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, multiplier_Pipeline_4, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, multiplier_Pipeline_4, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, multiplier_Pipeline_4, return value</column>
+<column name="sysarrayA_rb_63_out">out, 32, ap_vld, sysarrayA_rb_63_out, pointer</column>
+<column name="sysarrayA_rb_63_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_63_out, pointer</column>
+<column name="sysarrayA_rb_62_out">out, 32, ap_vld, sysarrayA_rb_62_out, pointer</column>
+<column name="sysarrayA_rb_62_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_62_out, pointer</column>
+<column name="sysarrayA_rb_61_out">out, 32, ap_vld, sysarrayA_rb_61_out, pointer</column>
+<column name="sysarrayA_rb_61_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_61_out, pointer</column>
+<column name="sysarrayA_rb_60_out">out, 32, ap_vld, sysarrayA_rb_60_out, pointer</column>
+<column name="sysarrayA_rb_60_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_60_out, pointer</column>
+<column name="sysarrayA_rb_59_out">out, 32, ap_vld, sysarrayA_rb_59_out, pointer</column>
+<column name="sysarrayA_rb_59_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_59_out, pointer</column>
+<column name="sysarrayA_rb_58_out">out, 32, ap_vld, sysarrayA_rb_58_out, pointer</column>
+<column name="sysarrayA_rb_58_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_58_out, pointer</column>
+<column name="sysarrayA_rb_57_out">out, 32, ap_vld, sysarrayA_rb_57_out, pointer</column>
+<column name="sysarrayA_rb_57_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_57_out, pointer</column>
+<column name="sysarrayA_rb_56_out">out, 32, ap_vld, sysarrayA_rb_56_out, pointer</column>
+<column name="sysarrayA_rb_56_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_56_out, pointer</column>
+<column name="sysarrayA_rb_55_out">out, 32, ap_vld, sysarrayA_rb_55_out, pointer</column>
+<column name="sysarrayA_rb_55_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_55_out, pointer</column>
+<column name="sysarrayA_rb_54_out">out, 32, ap_vld, sysarrayA_rb_54_out, pointer</column>
+<column name="sysarrayA_rb_54_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_54_out, pointer</column>
+<column name="sysarrayA_rb_53_out">out, 32, ap_vld, sysarrayA_rb_53_out, pointer</column>
+<column name="sysarrayA_rb_53_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_53_out, pointer</column>
+<column name="sysarrayA_rb_52_out">out, 32, ap_vld, sysarrayA_rb_52_out, pointer</column>
+<column name="sysarrayA_rb_52_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_52_out, pointer</column>
+<column name="sysarrayA_rb_51_out">out, 32, ap_vld, sysarrayA_rb_51_out, pointer</column>
+<column name="sysarrayA_rb_51_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_51_out, pointer</column>
+<column name="sysarrayA_rb_50_out">out, 32, ap_vld, sysarrayA_rb_50_out, pointer</column>
+<column name="sysarrayA_rb_50_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_50_out, pointer</column>
+<column name="sysarrayA_rb_49_out">out, 32, ap_vld, sysarrayA_rb_49_out, pointer</column>
+<column name="sysarrayA_rb_49_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_49_out, pointer</column>
+<column name="sysarrayA_rb_48_out">out, 32, ap_vld, sysarrayA_rb_48_out, pointer</column>
+<column name="sysarrayA_rb_48_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_48_out, pointer</column>
+<column name="sysarrayA_rb_47_out">out, 32, ap_vld, sysarrayA_rb_47_out, pointer</column>
+<column name="sysarrayA_rb_47_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_47_out, pointer</column>
+<column name="sysarrayA_rb_46_out">out, 32, ap_vld, sysarrayA_rb_46_out, pointer</column>
+<column name="sysarrayA_rb_46_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_46_out, pointer</column>
+<column name="sysarrayA_rb_45_out">out, 32, ap_vld, sysarrayA_rb_45_out, pointer</column>
+<column name="sysarrayA_rb_45_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_45_out, pointer</column>
+<column name="sysarrayA_rb_44_out">out, 32, ap_vld, sysarrayA_rb_44_out, pointer</column>
+<column name="sysarrayA_rb_44_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_44_out, pointer</column>
+<column name="sysarrayA_rb_43_out">out, 32, ap_vld, sysarrayA_rb_43_out, pointer</column>
+<column name="sysarrayA_rb_43_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_43_out, pointer</column>
+<column name="sysarrayA_rb_42_out">out, 32, ap_vld, sysarrayA_rb_42_out, pointer</column>
+<column name="sysarrayA_rb_42_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_42_out, pointer</column>
+<column name="sysarrayA_rb_41_out">out, 32, ap_vld, sysarrayA_rb_41_out, pointer</column>
+<column name="sysarrayA_rb_41_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_41_out, pointer</column>
+<column name="sysarrayA_rb_40_out">out, 32, ap_vld, sysarrayA_rb_40_out, pointer</column>
+<column name="sysarrayA_rb_40_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_40_out, pointer</column>
+<column name="sysarrayA_rb_39_out">out, 32, ap_vld, sysarrayA_rb_39_out, pointer</column>
+<column name="sysarrayA_rb_39_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_39_out, pointer</column>
+<column name="sysarrayA_rb_38_out">out, 32, ap_vld, sysarrayA_rb_38_out, pointer</column>
+<column name="sysarrayA_rb_38_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_38_out, pointer</column>
+<column name="sysarrayA_rb_37_out">out, 32, ap_vld, sysarrayA_rb_37_out, pointer</column>
+<column name="sysarrayA_rb_37_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_37_out, pointer</column>
+<column name="sysarrayA_rb_36_out">out, 32, ap_vld, sysarrayA_rb_36_out, pointer</column>
+<column name="sysarrayA_rb_36_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_36_out, pointer</column>
+<column name="sysarrayA_rb_35_out">out, 32, ap_vld, sysarrayA_rb_35_out, pointer</column>
+<column name="sysarrayA_rb_35_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_35_out, pointer</column>
+<column name="sysarrayA_rb_34_out">out, 32, ap_vld, sysarrayA_rb_34_out, pointer</column>
+<column name="sysarrayA_rb_34_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_34_out, pointer</column>
+<column name="sysarrayA_rb_33_out">out, 32, ap_vld, sysarrayA_rb_33_out, pointer</column>
+<column name="sysarrayA_rb_33_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_33_out, pointer</column>
+<column name="sysarrayA_rb_32_out">out, 32, ap_vld, sysarrayA_rb_32_out, pointer</column>
+<column name="sysarrayA_rb_32_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_32_out, pointer</column>
+<column name="sysarrayA_rb_31_out">out, 32, ap_vld, sysarrayA_rb_31_out, pointer</column>
+<column name="sysarrayA_rb_31_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_31_out, pointer</column>
+<column name="sysarrayA_rb_30_out">out, 32, ap_vld, sysarrayA_rb_30_out, pointer</column>
+<column name="sysarrayA_rb_30_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_30_out, pointer</column>
+<column name="sysarrayA_rb_29_out">out, 32, ap_vld, sysarrayA_rb_29_out, pointer</column>
+<column name="sysarrayA_rb_29_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_29_out, pointer</column>
+<column name="sysarrayA_rb_28_out">out, 32, ap_vld, sysarrayA_rb_28_out, pointer</column>
+<column name="sysarrayA_rb_28_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_28_out, pointer</column>
+<column name="sysarrayA_rb_27_out">out, 32, ap_vld, sysarrayA_rb_27_out, pointer</column>
+<column name="sysarrayA_rb_27_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_27_out, pointer</column>
+<column name="sysarrayA_rb_26_out">out, 32, ap_vld, sysarrayA_rb_26_out, pointer</column>
+<column name="sysarrayA_rb_26_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_26_out, pointer</column>
+<column name="sysarrayA_rb_25_out">out, 32, ap_vld, sysarrayA_rb_25_out, pointer</column>
+<column name="sysarrayA_rb_25_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_25_out, pointer</column>
+<column name="sysarrayA_rb_24_out">out, 32, ap_vld, sysarrayA_rb_24_out, pointer</column>
+<column name="sysarrayA_rb_24_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_24_out, pointer</column>
+<column name="sysarrayA_rb_23_out">out, 32, ap_vld, sysarrayA_rb_23_out, pointer</column>
+<column name="sysarrayA_rb_23_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_23_out, pointer</column>
+<column name="sysarrayA_rb_22_out">out, 32, ap_vld, sysarrayA_rb_22_out, pointer</column>
+<column name="sysarrayA_rb_22_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_22_out, pointer</column>
+<column name="sysarrayA_rb_21_out">out, 32, ap_vld, sysarrayA_rb_21_out, pointer</column>
+<column name="sysarrayA_rb_21_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_21_out, pointer</column>
+<column name="sysarrayA_rb_20_out">out, 32, ap_vld, sysarrayA_rb_20_out, pointer</column>
+<column name="sysarrayA_rb_20_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_20_out, pointer</column>
+<column name="sysarrayA_rb_19_out">out, 32, ap_vld, sysarrayA_rb_19_out, pointer</column>
+<column name="sysarrayA_rb_19_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_19_out, pointer</column>
+<column name="sysarrayA_rb_18_out">out, 32, ap_vld, sysarrayA_rb_18_out, pointer</column>
+<column name="sysarrayA_rb_18_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_18_out, pointer</column>
+<column name="sysarrayA_rb_17_out">out, 32, ap_vld, sysarrayA_rb_17_out, pointer</column>
+<column name="sysarrayA_rb_17_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_17_out, pointer</column>
+<column name="sysarrayA_rb_16_out">out, 32, ap_vld, sysarrayA_rb_16_out, pointer</column>
+<column name="sysarrayA_rb_16_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_16_out, pointer</column>
+<column name="sysarrayA_rb_15_out">out, 32, ap_vld, sysarrayA_rb_15_out, pointer</column>
+<column name="sysarrayA_rb_15_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_15_out, pointer</column>
+<column name="sysarrayA_rb_14_out">out, 32, ap_vld, sysarrayA_rb_14_out, pointer</column>
+<column name="sysarrayA_rb_14_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_14_out, pointer</column>
+<column name="sysarrayA_rb_13_out">out, 32, ap_vld, sysarrayA_rb_13_out, pointer</column>
+<column name="sysarrayA_rb_13_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_13_out, pointer</column>
+<column name="sysarrayA_rb_12_out">out, 32, ap_vld, sysarrayA_rb_12_out, pointer</column>
+<column name="sysarrayA_rb_12_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_12_out, pointer</column>
+<column name="sysarrayA_rb_11_out">out, 32, ap_vld, sysarrayA_rb_11_out, pointer</column>
+<column name="sysarrayA_rb_11_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_11_out, pointer</column>
+<column name="sysarrayA_rb_10_out">out, 32, ap_vld, sysarrayA_rb_10_out, pointer</column>
+<column name="sysarrayA_rb_10_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_10_out, pointer</column>
+<column name="sysarrayA_rb_9_out">out, 32, ap_vld, sysarrayA_rb_9_out, pointer</column>
+<column name="sysarrayA_rb_9_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_9_out, pointer</column>
+<column name="sysarrayA_rb_8_out">out, 32, ap_vld, sysarrayA_rb_8_out, pointer</column>
+<column name="sysarrayA_rb_8_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_8_out, pointer</column>
+<column name="sysarrayA_rb_7_out">out, 32, ap_vld, sysarrayA_rb_7_out, pointer</column>
+<column name="sysarrayA_rb_7_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_7_out, pointer</column>
+<column name="sysarrayA_rb_6_out">out, 32, ap_vld, sysarrayA_rb_6_out, pointer</column>
+<column name="sysarrayA_rb_6_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_6_out, pointer</column>
+<column name="sysarrayA_rb_5_out">out, 32, ap_vld, sysarrayA_rb_5_out, pointer</column>
+<column name="sysarrayA_rb_5_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_5_out, pointer</column>
+<column name="sysarrayA_rb_4_out">out, 32, ap_vld, sysarrayA_rb_4_out, pointer</column>
+<column name="sysarrayA_rb_4_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_4_out, pointer</column>
+<column name="sysarrayA_rb_3_out">out, 32, ap_vld, sysarrayA_rb_3_out, pointer</column>
+<column name="sysarrayA_rb_3_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_3_out, pointer</column>
+<column name="sysarrayA_rb_2_out">out, 32, ap_vld, sysarrayA_rb_2_out, pointer</column>
+<column name="sysarrayA_rb_2_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_2_out, pointer</column>
+<column name="sysarrayA_rb_1_out">out, 32, ap_vld, sysarrayA_rb_1_out, pointer</column>
+<column name="sysarrayA_rb_1_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_1_out, pointer</column>
+<column name="sysarrayA_rb_out">out, 32, ap_vld, sysarrayA_rb_out, pointer</column>
+<column name="sysarrayA_rb_out_ap_vld">out, 1, ap_vld, sysarrayA_rb_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

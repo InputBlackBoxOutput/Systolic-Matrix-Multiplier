@@ -1,0 +1,129 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=multiplier" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = vec_a offset = slave depth = 8 * 8 bundle = gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = vec_b offset = slave depth = 8 * 8 bundle = gmem2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = result offset = slave depth = 1 bundle = gmem3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = vec_a bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = vec_b bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = result bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = vector_len bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = return bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = localA dim = 1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = localB dim = 2 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 8" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = sysarrayA_ra dim = 0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = sysarrayB_ra dim = 0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = sysarrayA_rb dim = 0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:51:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = sysarrayB_rb dim = 0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = sysarrayC dim = 0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Systolic-Matrix-Multiplier/design.cpp:146:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multiplier" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 8" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:66:13" msg_body="Loop 'systolic2_load' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="systolic2_load"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:69:17" msg_body="Loop 'systolic3_load' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="systolic3_load"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:103:13" msg_body="Loop 'systolic2_compute' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="systolic2_compute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:106:17" msg_body="Loop 'systolic3_compute' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="systolic3_compute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:130:13" msg_body="Loop 'systolic2_shift' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="systolic2_shift"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:133:17" msg_body="Loop 'systolic3_shift' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="systolic3_shift"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'VITIS_LOOP_144_4' (Systolic-Matrix-Multiplier/design.cpp:144:31) in function 'multiplier': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:144:31" LoopName="VITIS_LOOP_144_4" TripCount="8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'VITIS_LOOP_144_4' (Systolic-Matrix-Multiplier/design.cpp:144:31) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:144:31" LoopName="VITIS_LOOP_144_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'systolic2_load' (Systolic-Matrix-Multiplier/design.cpp:66:13) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:66:13" LoopName="systolic2_load"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'systolic3_load' (Systolic-Matrix-Multiplier/design.cpp:69:17) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:69:17" LoopName="systolic3_load"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'systolic2_compute' (Systolic-Matrix-Multiplier/design.cpp:103:13) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:103:13" LoopName="systolic2_compute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'systolic3_compute' (Systolic-Matrix-Multiplier/design.cpp:106:17) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:106:17" LoopName="systolic3_compute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'systolic2_shift' (Systolic-Matrix-Multiplier/design.cpp:130:13) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:130:13" LoopName="systolic2_shift"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'systolic3_shift' (Systolic-Matrix-Multiplier/design.cpp:133:17) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:133:17" LoopName="systolic3_shift"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'VITIS_LOOP_33_2' (Systolic-Matrix-Multiplier/design.cpp:33:30) in function 'multiplier': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:33:30" LoopName="VITIS_LOOP_33_2" TripCount="8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:11:0" msg_body="Unrolling loop 'VITIS_LOOP_33_2' (Systolic-Matrix-Multiplier/design.cpp:33:30) in function 'multiplier' completely with a factor of 8">
+        <args Factor="8" LoopLoc="Systolic-Matrix-Multiplier/design.cpp:33:30" LoopName="VITIS_LOOP_33_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:25:6" msg_body="Applying array_partition to 'localA': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="localA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:27:6" msg_body="Applying array_partition to 'localB': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="localB"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:41:13" msg_body="Applying array_partition to 'sysarrayA_ra': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="sysarrayA_ra"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:44:6" msg_body="Applying array_partition to 'sysarrayB_ra': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="sysarrayB_ra"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:47:6" msg_body="Applying array_partition to 'sysarrayA_rb': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="sysarrayA_rb"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:50:6" msg_body="Applying array_partition to 'sysarrayB_rb': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="sysarrayB_rb"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Systolic-Matrix-Multiplier/design.cpp:53:6" msg_body="Applying array_partition to 'sysarrayC': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="sysarrayC"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

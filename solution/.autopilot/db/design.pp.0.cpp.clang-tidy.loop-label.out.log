@@ -1,0 +1,20 @@
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1106:2: warning: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 8; i++)
+ ^~~
+ VITIS_LOOP_31_1: 
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1106:2: note: FIX-IT applied suggested code changes
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1108:13: warning: Added loop label VITIS_LOOP_33_2:   [xilinx-label-all-loops]
+            for (int j = 0; j < 8; j++)
+            ^~~
+            VITIS_LOOP_33_2: 
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1108:13: note: FIX-IT applied suggested code changes
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1217:9: warning: Added loop label VITIS_LOOP_142_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < 8; i++)
+        ^~~
+        VITIS_LOOP_142_3: 
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1217:9: note: FIX-IT applied suggested code changes
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1219:13: warning: Added loop label VITIS_LOOP_144_4:   [xilinx-label-all-loops]
+            for (int j = 0; j < 8; j++)
+            ^~~
+            VITIS_LOOP_144_4: 
+/home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp:1219:13: note: FIX-IT applied suggested code changes

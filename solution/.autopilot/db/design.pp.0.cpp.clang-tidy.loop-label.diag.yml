@@ -1,0 +1,40 @@
+---
+MainSourceFile:  /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_1:  '
+    FileOffset:      31
+    FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/design.cpp
+    Replacements:    
+      - FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp
+        Offset:          31441
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_33_2:  '
+    FileOffset:      33
+    FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/design.cpp
+    Replacements:    
+      - FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp
+        Offset:          31491
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_33_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_142_3:  '
+    FileOffset:      142
+    FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/design.cpp
+    Replacements:    
+      - FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp
+        Offset:          34512
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_142_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_144_4:  '
+    FileOffset:      144
+    FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/design.cpp
+    Replacements:    
+      - FilePath:        /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/.autopilot/db/design.pp.0.cpp
+        Offset:          34562
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_144_4: '
+...

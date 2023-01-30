@@ -1,0 +1,363 @@
+
+
+================================================================
+== Synthesis Summary Report of 'multiplier'
+================================================================
++ General Information: 
+    * Date:           Sun Jan 29 23:47:00 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        Systolic-Matrix-Multiplier
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+    |                 Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |           |            |             |     |
+    |                 & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP    |     FF     |     LUT     | URAM|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+    |+ multiplier                             |     -|  0.00|      260|  2.600e+03|         -|      261|     -|        no|     -|  192 (15%)|  18616 (7%)|  26638 (22%)|    -|
+    | + multiplier_Pipeline_1                 |     -|  5.81|       66|    660.000|         -|       66|     -|        no|     -|          -|     9 (~0%)|     52 (~0%)|    -|
+    |  o Loop 1                               |     -|  7.30|       64|    640.000|         1|        1|    64|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_2                 |     -|  5.81|       66|    660.000|         -|       66|     -|        no|     -|          -|     9 (~0%)|     52 (~0%)|    -|
+    |  o Loop 1                               |     -|  7.30|       64|    640.000|         1|        1|    64|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_4                 |     -|  6.06|       66|    660.000|         -|       66|     -|        no|     -|          -|     9 (~0%)|     52 (~0%)|    -|
+    |  o Loop 1                               |     -|  7.30|       64|    640.000|         1|        1|    64|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_5                 |     -|  6.06|       66|    660.000|         -|       66|     -|        no|     -|          -|     9 (~0%)|     52 (~0%)|    -|
+    |  o Loop 1                               |     -|  7.30|       64|    640.000|         1|        1|    64|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_6                 |     -|  6.06|       66|    660.000|         -|       66|     -|        no|     -|          -|     9 (~0%)|     52 (~0%)|    -|
+    |  o Loop 1                               |     -|  7.30|       64|    640.000|         1|        1|    64|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_VITIS_LOOP_31_1   |     -|  0.00|       11|    110.000|         -|       11|     -|        no|     -|          -|   3605 (1%)|    2822 (2%)|    -|
+    |  o VITIS_LOOP_31_1                      |     -|  7.30|        9|     90.000|         3|        1|     8|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_systolic1         |     -|  1.99|       25|    250.000|         -|       25|     -|        no|     -|  192 (15%)|   6172 (2%)|  12389 (10%)|    -|
+    |  o systolic1                            |     -|  7.30|       23|    230.000|         2|        1|    23|       yes|     -|          -|           -|            -|    -|
+    | + multiplier_Pipeline_VITIS_LOOP_142_3  |     -|  0.00|       10|    100.000|         -|       10|     -|        no|     -|          -|   520 (~0%)|    633 (~0%)|    -|
+    |  o VITIS_LOOP_142_3                     |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|     -|          -|           -|            -|    -|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem1 | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem2 | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem3 | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | vec_a_1    | 0x10   | 32    | W      | Data signal of vec_a             |                                                                                    |
+| s_axi_control | vec_a_2    | 0x14   | 32    | W      | Data signal of vec_a             |                                                                                    |
+| s_axi_control | vec_b_1    | 0x1c   | 32    | W      | Data signal of vec_b             |                                                                                    |
+| s_axi_control | vec_b_2    | 0x20   | 32    | W      | Data signal of vec_b             |                                                                                    |
+| s_axi_control | result_1   | 0x28   | 32    | W      | Data signal of result            |                                                                                    |
+| s_axi_control | result_2   | 0x2c   | 32    | W      | Data signal of result            |                                                                                    |
+| s_axi_control | vector_len | 0x34   | 32    | W      | Data signal of vector_len        |                                                                                    |
++---------------+------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------+
+| Argument   | Direction | Datatype     |
++------------+-----------+--------------+
+| vec_a      | in        | int*         |
+| vec_b      | in        | int*         |
+| result     | out       | int*         |
+| vector_len | in        | unsigned int |
++------------+-----------+--------------+
+
+* SW-to-HW Mapping
++------------+---------------+-----------+----------+--------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Usage | HW Info                              |
++------------+---------------+-----------+----------+--------------------------------------+
+| vec_a      | m_axi_gmem1   | interface |          |                                      |
+| vec_a      | s_axi_control | register  | offset   | name=vec_a_1 offset=0x10 range=32    |
+| vec_a      | s_axi_control | register  | offset   | name=vec_a_2 offset=0x14 range=32    |
+| vec_b      | m_axi_gmem2   | interface |          |                                      |
+| vec_b      | s_axi_control | register  | offset   | name=vec_b_1 offset=0x1c range=32    |
+| vec_b      | s_axi_control | register  | offset   | name=vec_b_2 offset=0x20 range=32    |
+| result     | m_axi_gmem3   | interface |          |                                      |
+| result     | s_axi_control | register  | offset   | name=result_1 offset=0x28 range=32   |
+| result     | s_axi_control | register  | offset   | name=result_2 offset=0x2c range=32   |
+| vector_len | s_axi_control | register  |          | name=vector_len offset=0x34 range=32 |
++------------+---------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+----------------------------------------------+
+| HW Interface | Direction | Length | Width | Location                                     |
++--------------+-----------+--------+-------+----------------------------------------------+
+| m_axi_gmem1  | read      | 4      | 512   | Systolic-Matrix-Multiplier/design.cpp:31:19  |
+| m_axi_gmem2  | read      | 4      | 512   | Systolic-Matrix-Multiplier/design.cpp:31:19  |
+| m_axi_gmem3  | write     | 4      | 512   | Systolic-Matrix-Multiplier/design.cpp:142:27 |
++--------------+-----------+--------+-------+----------------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| Name                                    | DSP | Pragma | Variable            | Op  | Impl   | Latency |
++-----------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| + multiplier                            | 192 |        |                     |     |        |         |
+|  + multiplier_Pipeline_1                | 0   |        |                     |     |        |         |
+|    empty_112_fu_188_p2                  | -   |        | empty_112           | add | fabric | 0       |
+|  + multiplier_Pipeline_2                | 0   |        |                     |     |        |         |
+|    empty_109_fu_188_p2                  | -   |        | empty_109           | add | fabric | 0       |
+|  + multiplier_Pipeline_4                | 0   |        |                     |     |        |         |
+|    empty_106_fu_892_p2                  | -   |        | empty_106           | add | fabric | 0       |
+|  + multiplier_Pipeline_5                | 0   |        |                     |     |        |         |
+|    empty_103_fu_892_p2                  | -   |        | empty_103           | add | fabric | 0       |
+|  + multiplier_Pipeline_6                | 0   |        |                     |     |        |         |
+|    empty_100_fu_892_p2                  | -   |        | empty_100           | add | fabric | 0       |
+|  + multiplier_Pipeline_VITIS_LOOP_31_1  | 0   |        |                     |     |        |         |
+|    add_ln31_fu_1978_p2                  | -   |        | add_ln31            | add | fabric | 0       |
+|  + multiplier_Pipeline_systolic1        | 192 |        |                     |     |        |         |
+|    indvars_iv_next1089_fu_4202_p2       | -   |        | indvars_iv_next1089 | add | fabric | 0       |
+|    add_ln73_fu_5020_p2                  | -   |        | add_ln73            | add | fabric | 0       |
+|    add_ln83_fu_5037_p2                  | -   |        | add_ln83            | add | fabric | 0       |
+|    add_ln92_fu_4234_p2                  | -   |        | add_ln92            | add | fabric | 0       |
+|    add_ln83_1_fu_5085_p2                | -   |        | add_ln83_1          | add | fabric | 0       |
+|    add_ln92_1_fu_4246_p2                | -   |        | add_ln92_1          | add | fabric | 0       |
+|    add_ln83_2_fu_5143_p2                | -   |        | add_ln83_2          | add | fabric | 0       |
+|    add_ln92_2_fu_4258_p2                | -   |        | add_ln92_2          | add | fabric | 0       |
+|    add_ln83_3_fu_5191_p2                | -   |        | add_ln83_3          | add | fabric | 0       |
+|    add_ln83_4_fu_5249_p2                | -   |        | add_ln83_4          | add | fabric | 0       |
+|    add_ln92_3_fu_4282_p2                | -   |        | add_ln92_3          | add | fabric | 0       |
+|    add_ln83_5_fu_5297_p2                | -   |        | add_ln83_5          | add | fabric | 0       |
+|    add_ln92_4_fu_4294_p2                | -   |        | add_ln92_4          | add | fabric | 0       |
+|    add_ln83_6_fu_5345_p2                | -   |        | add_ln83_6          | add | fabric | 0       |
+|    add_ln92_5_fu_4306_p2                | -   |        | add_ln92_5          | add | fabric | 0       |
+|    add_ln83_7_fu_5505_p2                | -   |        | add_ln83_7          | add | fabric | 0       |
+|    add_ln83_8_fu_5661_p2                | -   |        | add_ln83_8          | add | fabric | 0       |
+|    add_ln83_9_fu_5817_p2                | -   |        | add_ln83_9          | add | fabric | 0       |
+|    add_ln83_10_fu_5973_p2               | -   |        | add_ln83_10         | add | fabric | 0       |
+|    add_ln83_11_fu_6129_p2               | -   |        | add_ln83_11         | add | fabric | 0       |
+|    add_ln83_12_fu_6285_p2               | -   |        | add_ln83_12         | add | fabric | 0       |
+|    add_ln83_13_fu_6441_p2               | -   |        | add_ln83_13         | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U349              | 3   |        | mul_ln119           | mul | auto   | 0       |
+|    result_fu_6491_p2                    | -   |        | result              | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U350              | 3   |        | mul_ln119_1         | mul | auto   | 0       |
+|    result_1_fu_6510_p2                  | -   |        | result_1            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U351              | 3   |        | mul_ln119_2         | mul | auto   | 0       |
+|    result_2_fu_6529_p2                  | -   |        | result_2            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U352              | 3   |        | mul_ln119_3         | mul | auto   | 0       |
+|    result_3_fu_6548_p2                  | -   |        | result_3            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U353              | 3   |        | mul_ln119_4         | mul | auto   | 0       |
+|    result_4_fu_6567_p2                  | -   |        | result_4            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U354              | 3   |        | mul_ln119_5         | mul | auto   | 0       |
+|    result_5_fu_6586_p2                  | -   |        | result_5            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U355              | 3   |        | mul_ln119_6         | mul | auto   | 0       |
+|    result_6_fu_6605_p2                  | -   |        | result_6            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U356              | 3   |        | mul_ln119_7         | mul | auto   | 0       |
+|    result_7_fu_6624_p2                  | -   |        | result_7            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U357              | 3   |        | mul_ln119_8         | mul | auto   | 0       |
+|    result_8_fu_6643_p2                  | -   |        | result_8            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U358              | 3   |        | mul_ln119_9         | mul | auto   | 0       |
+|    result_9_fu_6662_p2                  | -   |        | result_9            | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U359              | 3   |        | mul_ln119_10        | mul | auto   | 0       |
+|    result_10_fu_6681_p2                 | -   |        | result_10           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U360              | 3   |        | mul_ln119_11        | mul | auto   | 0       |
+|    result_11_fu_6700_p2                 | -   |        | result_11           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U361              | 3   |        | mul_ln119_12        | mul | auto   | 0       |
+|    result_12_fu_6719_p2                 | -   |        | result_12           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U362              | 3   |        | mul_ln119_13        | mul | auto   | 0       |
+|    result_13_fu_6738_p2                 | -   |        | result_13           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U363              | 3   |        | mul_ln119_14        | mul | auto   | 0       |
+|    result_14_fu_6757_p2                 | -   |        | result_14           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U364              | 3   |        | mul_ln119_15        | mul | auto   | 0       |
+|    result_15_fu_6776_p2                 | -   |        | result_15           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U365              | 3   |        | mul_ln119_16        | mul | auto   | 0       |
+|    result_16_fu_6795_p2                 | -   |        | result_16           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U366              | 3   |        | mul_ln119_17        | mul | auto   | 0       |
+|    result_17_fu_6814_p2                 | -   |        | result_17           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U367              | 3   |        | mul_ln119_18        | mul | auto   | 0       |
+|    result_18_fu_6833_p2                 | -   |        | result_18           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U368              | 3   |        | mul_ln119_19        | mul | auto   | 0       |
+|    result_19_fu_6852_p2                 | -   |        | result_19           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U369              | 3   |        | mul_ln119_20        | mul | auto   | 0       |
+|    result_20_fu_6871_p2                 | -   |        | result_20           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U370              | 3   |        | mul_ln119_21        | mul | auto   | 0       |
+|    result_21_fu_6890_p2                 | -   |        | result_21           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U371              | 3   |        | mul_ln119_22        | mul | auto   | 0       |
+|    result_22_fu_6909_p2                 | -   |        | result_22           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U372              | 3   |        | mul_ln119_23        | mul | auto   | 0       |
+|    result_23_fu_6928_p2                 | -   |        | result_23           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U373              | 3   |        | mul_ln119_24        | mul | auto   | 0       |
+|    result_24_fu_6947_p2                 | -   |        | result_24           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U374              | 3   |        | mul_ln119_25        | mul | auto   | 0       |
+|    result_25_fu_6966_p2                 | -   |        | result_25           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U375              | 3   |        | mul_ln119_26        | mul | auto   | 0       |
+|    result_26_fu_6985_p2                 | -   |        | result_26           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U376              | 3   |        | mul_ln119_27        | mul | auto   | 0       |
+|    result_27_fu_7004_p2                 | -   |        | result_27           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U377              | 3   |        | mul_ln119_28        | mul | auto   | 0       |
+|    result_28_fu_7023_p2                 | -   |        | result_28           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U378              | 3   |        | mul_ln119_29        | mul | auto   | 0       |
+|    result_29_fu_7042_p2                 | -   |        | result_29           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U379              | 3   |        | mul_ln119_30        | mul | auto   | 0       |
+|    result_30_fu_7061_p2                 | -   |        | result_30           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U380              | 3   |        | mul_ln119_31        | mul | auto   | 0       |
+|    result_31_fu_7080_p2                 | -   |        | result_31           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U381              | 3   |        | mul_ln119_32        | mul | auto   | 0       |
+|    result_32_fu_7099_p2                 | -   |        | result_32           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U382              | 3   |        | mul_ln119_33        | mul | auto   | 0       |
+|    result_33_fu_7118_p2                 | -   |        | result_33           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U383              | 3   |        | mul_ln119_34        | mul | auto   | 0       |
+|    result_34_fu_7137_p2                 | -   |        | result_34           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U384              | 3   |        | mul_ln119_35        | mul | auto   | 0       |
+|    result_35_fu_7156_p2                 | -   |        | result_35           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U385              | 3   |        | mul_ln119_36        | mul | auto   | 0       |
+|    result_36_fu_7175_p2                 | -   |        | result_36           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U386              | 3   |        | mul_ln119_37        | mul | auto   | 0       |
+|    result_37_fu_7194_p2                 | -   |        | result_37           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U387              | 3   |        | mul_ln119_38        | mul | auto   | 0       |
+|    result_38_fu_7213_p2                 | -   |        | result_38           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U388              | 3   |        | mul_ln119_39        | mul | auto   | 0       |
+|    result_39_fu_7232_p2                 | -   |        | result_39           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U389              | 3   |        | mul_ln119_40        | mul | auto   | 0       |
+|    result_40_fu_7251_p2                 | -   |        | result_40           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U390              | 3   |        | mul_ln119_41        | mul | auto   | 0       |
+|    result_41_fu_7270_p2                 | -   |        | result_41           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U391              | 3   |        | mul_ln119_42        | mul | auto   | 0       |
+|    result_42_fu_7289_p2                 | -   |        | result_42           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U392              | 3   |        | mul_ln119_43        | mul | auto   | 0       |
+|    result_43_fu_7308_p2                 | -   |        | result_43           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U393              | 3   |        | mul_ln119_44        | mul | auto   | 0       |
+|    result_44_fu_7327_p2                 | -   |        | result_44           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U394              | 3   |        | mul_ln119_45        | mul | auto   | 0       |
+|    result_45_fu_7346_p2                 | -   |        | result_45           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U395              | 3   |        | mul_ln119_46        | mul | auto   | 0       |
+|    result_46_fu_7365_p2                 | -   |        | result_46           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U396              | 3   |        | mul_ln119_47        | mul | auto   | 0       |
+|    result_47_fu_7384_p2                 | -   |        | result_47           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U397              | 3   |        | mul_ln119_48        | mul | auto   | 0       |
+|    result_48_fu_7403_p2                 | -   |        | result_48           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U398              | 3   |        | mul_ln119_49        | mul | auto   | 0       |
+|    result_49_fu_7422_p2                 | -   |        | result_49           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U399              | 3   |        | mul_ln119_50        | mul | auto   | 0       |
+|    result_50_fu_7441_p2                 | -   |        | result_50           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U400              | 3   |        | mul_ln119_51        | mul | auto   | 0       |
+|    result_51_fu_7460_p2                 | -   |        | result_51           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U401              | 3   |        | mul_ln119_52        | mul | auto   | 0       |
+|    result_52_fu_7479_p2                 | -   |        | result_52           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U402              | 3   |        | mul_ln119_53        | mul | auto   | 0       |
+|    result_53_fu_7498_p2                 | -   |        | result_53           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U403              | 3   |        | mul_ln119_54        | mul | auto   | 0       |
+|    result_54_fu_7517_p2                 | -   |        | result_54           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U404              | 3   |        | mul_ln119_55        | mul | auto   | 0       |
+|    result_55_fu_7536_p2                 | -   |        | result_55           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U405              | 3   |        | mul_ln119_56        | mul | auto   | 0       |
+|    result_56_fu_7555_p2                 | -   |        | result_56           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U406              | 3   |        | mul_ln119_57        | mul | auto   | 0       |
+|    result_57_fu_7574_p2                 | -   |        | result_57           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U407              | 3   |        | mul_ln119_58        | mul | auto   | 0       |
+|    result_58_fu_7593_p2                 | -   |        | result_58           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U408              | 3   |        | mul_ln119_59        | mul | auto   | 0       |
+|    result_59_fu_7612_p2                 | -   |        | result_59           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U409              | 3   |        | mul_ln119_60        | mul | auto   | 0       |
+|    result_60_fu_7631_p2                 | -   |        | result_60           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U410              | 3   |        | mul_ln119_61        | mul | auto   | 0       |
+|    result_61_fu_7650_p2                 | -   |        | result_61           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U411              | 3   |        | mul_ln119_62        | mul | auto   | 0       |
+|    result_62_fu_7669_p2                 | -   |        | result_62           | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U412              | 3   |        | mul_ln119_63        | mul | auto   | 0       |
+|    result_63_fu_7688_p2                 | -   |        | result_63           | add | fabric | 0       |
+|  + multiplier_Pipeline_VITIS_LOOP_142_3 | 0   |        |                     |     |        |         |
+|    add_ln142_fu_623_p2                  | -   |        | add_ln142           | add | fabric | 0       |
++-----------------------------------------+-----+--------+---------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------+------+------+--------+----------+---------+------+---------+
+| Name         | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------------+------+------+--------+----------+---------+------+---------+
+| + multiplier | 0    | 0    |        |          |         |      |         |
+|   localA_U   | -    | -    |        | localA   | ram_t2p | auto | 1       |
+|   localA_1_U | -    | -    |        | localA_1 | ram_t2p | auto | 1       |
+|   localA_2_U | -    | -    |        | localA_2 | ram_t2p | auto | 1       |
+|   localA_3_U | -    | -    |        | localA_3 | ram_t2p | auto | 1       |
+|   localA_4_U | -    | -    |        | localA_4 | ram_t2p | auto | 1       |
+|   localA_5_U | -    | -    |        | localA_5 | ram_t2p | auto | 1       |
+|   localA_6_U | -    | -    |        | localA_6 | ram_t2p | auto | 1       |
+|   localA_7_U | -    | -    |        | localA_7 | ram_t2p | auto | 1       |
+|   localB_U   | -    | -    |        | localB   | ram_1p  | auto | 1       |
+|   localB_1_U | -    | -    |        | localB_1 | ram_1p  | auto | 1       |
+|   localB_2_U | -    | -    |        | localB_2 | ram_1p  | auto | 1       |
+|   localB_3_U | -    | -    |        | localB_3 | ram_1p  | auto | 1       |
+|   localB_4_U | -    | -    |        | localB_4 | ram_1p  | auto | 1       |
+|   localB_5_U | -    | -    |        | localB_5 | ram_1p  | auto | 1       |
+|   localB_6_U | -    | -    |        | localB_6 | ram_1p  | auto | 1       |
+|   localB_7_U | -    | -    |        | localB_7 | ram_1p  | auto | 1       |
++--------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------------------------------+---------------------------------------------------------+
+| Type            | Options                                                        | Location                                                |
++-----------------+----------------------------------------------------------------+---------------------------------------------------------+
+| interface       | m_axi port = vec_a offset = slave depth = 8 * 8 bundle = gmem1 | Systolic-Matrix-Multiplier/design.cpp:14 in multiplier  |
+| interface       | m_axi port = vec_b offset = slave depth = 8 * 8 bundle = gmem2 | Systolic-Matrix-Multiplier/design.cpp:15 in multiplier  |
+| interface       | m_axi port = result offset = slave depth = 1 bundle = gmem3    | Systolic-Matrix-Multiplier/design.cpp:16 in multiplier  |
+| interface       | s_axilite port = vec_a bundle = control                        | Systolic-Matrix-Multiplier/design.cpp:18 in multiplier  |
+| interface       | s_axilite port = vec_b bundle = control                        | Systolic-Matrix-Multiplier/design.cpp:19 in multiplier  |
+| interface       | s_axilite port = result bundle = control                       | Systolic-Matrix-Multiplier/design.cpp:20 in multiplier  |
+| interface       | s_axilite port = vector_len bundle = control                   | Systolic-Matrix-Multiplier/design.cpp:21 in multiplier  |
+| interface       | s_axilite port = return bundle = control                       | Systolic-Matrix-Multiplier/design.cpp:22 in multiplier  |
+| array_partition | variable = localA dim = 1 complete                             | Systolic-Matrix-Multiplier/design.cpp:26 in multiplier  |
+| array_partition | variable = localB dim = 2 complete                             | Systolic-Matrix-Multiplier/design.cpp:28 in multiplier  |
+| unroll          | factor = 8                                                     | Systolic-Matrix-Multiplier/design.cpp:35 in multiplier  |
+| array_partition | variable = sysarrayA_ra dim = 0 complete                       | Systolic-Matrix-Multiplier/design.cpp:42 in multiplier  |
+| array_partition | variable = sysarrayB_ra dim = 0 complete                       | Systolic-Matrix-Multiplier/design.cpp:45 in multiplier  |
+| array_partition | variable = sysarrayA_rb dim = 0 complete                       | Systolic-Matrix-Multiplier/design.cpp:48 in multiplier  |
+| array_partition | variable = sysarrayB_rb dim = 0 complete                       | Systolic-Matrix-Multiplier/design.cpp:51 in multiplier  |
+| array_partition | variable = sysarrayC dim = 0 complete                          | Systolic-Matrix-Multiplier/design.cpp:54 in multiplier  |
+| pipeline        | II = 1                                                         | Systolic-Matrix-Multiplier/design.cpp:63 in multiplier  |
+| unroll          | factor = 8                                                     | Systolic-Matrix-Multiplier/design.cpp:146 in multiplier |
++-----------------+----------------------------------------------------------------+---------------------------------------------------------+
+
+

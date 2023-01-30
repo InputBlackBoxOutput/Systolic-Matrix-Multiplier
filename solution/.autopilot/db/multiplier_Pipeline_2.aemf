@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1675057610038">
+  <ports id="1" name="localB" type="PortType" coreName="RAM" coreId="3621216858" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="localB_1" type="PortType" coreName="RAM" coreId="25" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="3" name="localB_2" type="PortType" coreName="RAM" coreId="3644941344" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="4" name="localB_3" type="PortType" coreName="RAM" coreId="3644719888" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="5" name="localB_4" type="PortType" coreName="RAM" coreId="3644885792" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="6" name="localB_5" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="7" name="localB_6" type="PortType" coreName="RAM" coreId="3645634368" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="8" name="localB_7" type="PortType" coreName="RAM" coreId="3645466912" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="67" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="76" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="77" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="84" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.2"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.3"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@ports.4"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@ports.5"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@ports.6"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@ports.7"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="126" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="132" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="135" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="144" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="155" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="161" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="178" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="179" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="180" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="182" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="184" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="185" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="186" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="187" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="188" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="189" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="192" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="193" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="194" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="196" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="198" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="199" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="200" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <blocks id="12" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>memset.loop33</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="empty" coreId="824209519" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty_write_ln0" coreId="3645646640" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>memset.loop33</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="61" name="split32.exitStub" type="BlockType">
+    <controlInputObjs>memset.loop33</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln0" coreId="3645372448" opcode="ret" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="229" pipe_depth="1" RegionName="Loop 1">
+    <basic_blocks id="19" name="memset.loop33" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.exit1250</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>split32.exitStub</controlOutputObjs>
+      <controlOutputObjs>memset.loop33.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="p_load" coreId="775210245" bitwidth="7" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="exitcond111374" rtlName="exitcond111374_fu_182_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.81" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="empty_109" rtlName="empty_109_fu_188_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="7" opcode="add" m_display="0" m_delay="0.77" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>memset.loop33.split</controlInputObjs>
+        <controlInputObjs>split32.exitStub</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="32" name="memset.loop33.split" type="BlockType">
+      <controlInputObjs>memset.loop33</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.case.71258</controlOutputObjs>
+      <controlOutputObjs>.case.01251</controlOutputObjs>
+      <controlOutputObjs>.case.11252</controlOutputObjs>
+      <controlOutputObjs>.case.21253</controlOutputObjs>
+      <controlOutputObjs>.case.31254</controlOutputObjs>
+      <controlOutputObjs>.case.41255</controlOutputObjs>
+      <controlOutputObjs>.case.51256</controlOutputObjs>
+      <controlOutputObjs>.case.61257</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp_8" rtlName="tmp_8_fu_194_p4" coreId="3645747480" bitwidth="3" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="p_cast294" rtlName="p_cast294_fu_204_p1" coreId="3644931152" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="localB_addr" coreId="128" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>localB</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="localB_1_addr" coreId="3645581856" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="localB_2_addr" coreId="0" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_2</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="localB_3_addr" coreId="3644931152" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_3</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="localB_4_addr" coreId="2020173413" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_4</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="localB_5_addr" coreId="3645403152" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_5</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="localB_6_addr" coreId="0" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_6</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="localB_7_addr" coreId="3645460400" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>localB_7</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="empty_110" rtlName="empty_110_fu_216_p1" coreId="1886351180" bitwidth="3" opcode="trunc" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="_ln0" coreId="3645372272" opcode="switch" m_display="0" m_delay="0.44" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <dataInputObjs>trunc</dataInputObjs>
+        <controlInputObjs>.case.71258</controlInputObjs>
+        <controlInputObjs>.case.01251</controlInputObjs>
+        <controlInputObjs>.case.11252</controlInputObjs>
+        <controlInputObjs>.case.21253</controlInputObjs>
+        <controlInputObjs>.case.31254</controlInputObjs>
+        <controlInputObjs>.case.41255</controlInputObjs>
+        <controlInputObjs>.case.51256</controlInputObjs>
+        <controlInputObjs>.case.61257</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="35" name=".case.61257" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="localB_6_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="38" name=".case.51256" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="localB_5_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln0" coreId="808591443" opcode="br" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="41" name=".case.41255" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="localB_4_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="br_ln0" coreId="171847458" opcode="br" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="44" name=".case.31254" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="localB_3_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln0" coreId="539915108" opcode="br" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="47" name=".case.21253" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="localB_2_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln0" coreId="3645402216" opcode="br" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="50" name=".case.11252" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="localB_1_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln0" coreId="3645723808" opcode="br" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="53" name=".case.01251" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="localB_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="br_ln0" coreId="3645723808" opcode="br" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="56" name=".case.71258" type="BlockType">
+      <controlInputObjs>memset.loop33.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.exit1250</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="localB_7_addr_write_ln0" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" opcode="store" m_display="0" m_delay="0.67" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln0" coreId="23" opcode="br" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <controlInputObjs>.exit1250</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="59" name=".exit1250" type="BlockType">
+      <controlInputObjs>.case.61257</controlInputObjs>
+      <controlInputObjs>.case.51256</controlInputObjs>
+      <controlInputObjs>.case.41255</controlInputObjs>
+      <controlInputObjs>.case.31254</controlInputObjs>
+      <controlInputObjs>.case.21253</controlInputObjs>
+      <controlInputObjs>.case.11252</controlInputObjs>
+      <controlInputObjs>.case.01251</controlInputObjs>
+      <controlInputObjs>.case.71258</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>memset.loop33</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="empty_write_ln0" coreId="3645744328" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln0" coreId="7955819" opcode="br" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <controlInputObjs>memset.loop33</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="empty_reg_225">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <expressionNodes realName="localB_5_addr_gep_fu_97">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_cast294_fu_204">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_3_addr_gep_fu_83">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_7_addr_gep_fu_111">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_8_fu_194">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_4_addr_gep_fu_90">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_109_fu_188">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond111374_fu_182">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_1_addr_gep_fu_69">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_6_addr_gep_fu_104">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_addr_gep_fu_62">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_110_fu_216">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="localB_2_addr_gep_fu_76">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_58">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_220">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_174">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_load_load_fu_179">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="localB">
+    <nodeIds>51</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_1">
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_2">
+    <nodeIds>45</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_3">
+    <nodeIds>42</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_4">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_5">
+    <nodeIds>36</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_6">
+    <nodeIds>33</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="localB_7">
+    <nodeIds>54</nodeIds>
+  </memoryPorts>
+  <ioPorts name="localB(p0)">
+    <contents name="store">
+      <nodeIds>51</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_1(p0)">
+    <contents name="store">
+      <nodeIds>48</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_2(p0)">
+    <contents name="store">
+      <nodeIds>45</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_3(p0)">
+    <contents name="store">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_4(p0)">
+    <contents name="store">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_5(p0)">
+    <contents name="store">
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_6(p0)">
+    <contents name="store">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="localB_7(p0)">
+    <contents name="store">
+      <nodeIds>54</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="multiplier_Pipeline_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="66" mMaxLatency="66">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>12</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop_1" mII="1" mDepth="1" mMinTripCount="64" mMaxTripCount="64" mMinLatency="64" mMaxLatency="64" mType="1">
+      <basicBlocks>19</basicBlocks>
+      <basicBlocks>32</basicBlocks>
+      <basicBlocks>35</basicBlocks>
+      <basicBlocks>38</basicBlocks>
+      <basicBlocks>41</basicBlocks>
+      <basicBlocks>44</basicBlocks>
+      <basicBlocks>47</basicBlocks>
+      <basicBlocks>50</basicBlocks>
+      <basicBlocks>53</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>59</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>61</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# xsim v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Jan 29 23:47:59 2023
+# Process ID: 9252
+# Current directory: /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/multiplier/xsim_script.tcl}
+# Log file: /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/sim/verilog/xsim.log
+# Journal file: /home/blackbox/Desktop/Systolic-Matrix-Multiplier/solution/sim/verilog/xsim.jou
+# Running On: InputBlackBoxOutput, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 4, Host memory: 8221 MB
+#-----------------------------------------------------------
+source xsim.dir/multiplier/xsim_script.tcl
+source multiplier.tcl
